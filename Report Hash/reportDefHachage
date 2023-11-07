@@ -1,0 +1,5 @@
+# Défninition du hachage
+
+Le hashage est un outil de chiffrement permetant de transformer des données diverses en forme abrégée que l'on appel valeur de hachage.
+Pour chaque méthode de hachage, les valeurs de hachage sont toujours de la même longueur.
+
