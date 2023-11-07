@@ -1,0 +1,5 @@
+- Présentation du principe d'une fonction de hachage
+- Présentation des anciennes méthodes (SHA-1 , MD-5) et pourquoi elles ne sont plus utilisés
+- Présentation de sha-256 (Utilisation / Avantage - Inconvénients)
+- Expliquation du principe de collision et comment régler le soucis
+- Qu'est qu'une bonne fonction de hachage
