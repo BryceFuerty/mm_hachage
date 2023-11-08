@@ -10,5 +10,11 @@ La découverte de nombreuses vulnérabilité au fil du temps ont conduits à l'a
 
 Inconvenients du sha-1 : 
 
-Le principale incovénient du sha-1 est la présence de collision. Une collsion est lorsque deux messages différents (ou fichiers) ressortent avec le même hash. Cette probabilité étais a première relativement faible,
+Le principale incovénient du sha-1 est la présence de collision. Une collsion est lorsque deux messages différents (ou fichiers) ressortent avec le même hash. Cette probabilité étais a première vu relativement faible,
 Mais il n'a fallut que 10 ans pour qu'en 2005 la première collision soit trouvé par un groupe de chercheurs. Cela ouvre la voie pour des cybercriminels afin que ces derniers puissent prendre l'idendité d'un tier pour pouvoir signer un document à sa place par exemple.
+
+L'autre faiblesse de sha-1 est sa vulnérabilité au attaque par force brute. En effet en 2005 il a été prouvé par Wang et al qu'il fallait 2^63 opération pour créer une collision.
+
+MD5 : 
+
+
