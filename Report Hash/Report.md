@@ -3,3 +3,4 @@
 - Présentation de sha-256 (Utilisation / Avantage - Inconvénients)
 - Expliquation du principe de collision et comment régler le soucis
 - Qu'est qu'une bonne fonction de hachage
+- Paradoxe des anniversaires lié aux hachage
