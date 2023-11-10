@@ -1,4 +1,4 @@
-# Défninition du hachage
+# Définition du hachage
 
 Le hachage est un outil de chiffrement permetant de transformer des données diverses en forme abrégée que l'on appel valeur de hachage.
 Pour chaque méthode de hachage, les valeurs de hachage sont toujours de la même longueur.
@@ -25,10 +25,12 @@ Une autre propriétée importante est la résistance en préimage, étant donné
 Comme nous en avons parlé précédement, une des conditions de sécurité nécessaire porte sur la longueur des empreintes.
 Cette condition résulte d'une méthode simple pour obtenir des colisions appelées *attaque des anniversaires*. Ce nom provient du *paradoxe des anniversaires*, qui dit que la probabilité qu'il exise deux personnes partageant la même date d'anniversaire dans une assemblée de 23 personnes aléatoiresest d'au moint 1/2.
 
-Pour prouver cette explication, nous pouvons utiliser la fonction de hachage de Chaum-van Heijst-Pfitzmann. La forumule suivante permet de déterminer à partir de combien d'itérations nous avons 50% de chances de tomber sur le même résultat : 1.17 \sqrt{n} Pour n le nombre de possiblités.
+Pour prouver cette explication, nous pouvons utiliser la fonction de hachage de Chaum-van Heijst-Pfitzmann. La forumule suivante permet de déterminer à partir de combien d'itérations nous avons 50% de chances de tomber sur le même résultat : 1.17 $\sqrt{n}$, Pour n le nombre de possiblités.
 
-Afin de prouver l'attaque des anniversaires nous allons utiliser ce calcul sur notre exemple d'un groupe de personne. Le calcul sera donc le suivant : 1.17 \sqrt{365}
+Afin de prouver l'attaque des anniversaires nous allons utiliser ce calcul sur notre exemple d'un groupe de personne. Le calcul sera donc le suivant : 1.17 $\sqrt{365}$
+
 Le résultat est le suivant : $\approx$ 22.352
 
+Pour 23 personnes on sait donc qu'il y a une probabilité de plus de 50% qu'une personne soit née le même jour qu'une autre personne du groupe.
 
 
