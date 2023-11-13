@@ -1,10 +1,13 @@
-# Définition du hachage
+# Le Hachage
+
+
+## Définition du hachage
 
 Le hachage est un outil de chiffrement permetant de transformer des données diverses en forme abrégée que l'on appel valeur de hachage.
 Pour chaque méthode de hachage, les valeurs de hachage sont toujours de la même longueur.
 Contrairement au chiffrement une fois les données hachés il n'est pas possible de revenir à la valeur d'origine et non haché.
 
-# Son fonctionnement
+## Son fonctionnement
 
 Il extiste trois éléments dans le processus de hachage :
   - La fonction de hachage : Il s'agit d'un algorithme quiu transforme des données de longueurs différentes en chaines de longueurs égales
@@ -20,7 +23,7 @@ Le hachage repose sur cinq caractéristiques :
 
 Une autre propriétée importante est la résistance en préimage, étant donnée une valeurde haché, il doit être difficile de déterminer un message dont l’image par la fonction de hachage soit égale à cette valeur de haché
 
-# L'attaque des anniversaires
+## L'attaque des anniversaires
 
 Comme nous en avons parlé précédement, une des conditions de sécurité nécessaire porte sur la longueur des empreintes.
 Cette condition résulte d'une méthode simple pour obtenir des colisions appelées *attaque des anniversaires*. Ce nom provient du *paradoxe des anniversaires*, qui dit que la probabilité qu'il exise deux personnes partageant la même date d'anniversaire dans une assemblée de 23 personnes aléatoiresest d'au moint 1/2.
@@ -32,5 +35,28 @@ Afin de prouver l'attaque des anniversaires nous allons utiliser ce calcul sur n
 Le résultat est le suivant : $\approx$ 22.352
 
 Pour 23 personnes on sait donc qu'il y a une probabilité de plus de 50% qu'une personne soit née le même jour qu'une autre personne du groupe.
+
+## Les colisions
+
+Nous allons écrire un petit algorithme permettant de chercher des colisions, cependant cette algorithme de cherchera des colisions que parmis des nombres aléatoire.
+Cet algorithme à été récupéré dans le livre *Cryptographie Théorie et pratique* de Douglas Stinson
+
+![Texte alternatif](images/AlgoColisionInutiles.PNG "Algorithme de colision")
+
+Cependant le code ci-dessus n'a pas de réel interet car l'interet de trouver des données avec le même hash serait des colisions de document afin de les falssifie.
+Cette méthode "Brute Force" pouvait fonctionner aupravant avec les anciennes méthodes de hash tel que MD2, MD4, MD5 ou SHA1. Mais pour les méthode actuelles tel que SHA256 ou SHA512 ont des valeurs hachées trop longues pour trouver des colisions.
+
+Un exemple assez flagrant afin d'expliquer pourquoi ces dernières version du hash SHA sont assez robuste, il faudrait 78 256 434 036 333 969 729 345 924 683 144 455 907 années pour générer la totalité des combinaisons du sha256.
+
+
+
+
+## Sources
+
+Livre : *Cryptographie Théorie et pratique* de Douglas Stinson 
+
+Liens : 
+
+[Steemit](https://steemit.com/fr/@peneinc/une-collision-sha256-est-elle-possible-hash-math-blog)
 
 
