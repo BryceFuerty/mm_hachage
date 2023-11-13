@@ -29,7 +29,7 @@ MD5 :
  D : 0x76543210
  Ce sont les variables de chaînage
 
-La boucle principale a 4 rondes , chaque ronde consiste en 16 exécutables d'une opération.Chaque opération calcule une non linéaire de trois variables A,B,C et D.
+La boucle principale a 4 rondes , chaque ronde consiste en 16 exécutables d'une opération.Chaque opération calcule une fonction non linéaire de trois variables A,B,C et D.
 
  
  Securité : 
