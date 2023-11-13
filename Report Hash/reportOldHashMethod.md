@@ -61,6 +61,15 @@ tel que h(m) = p.
 est difficile de trouver à partir d’un message m donné un
 autre message m’ tel que h(m) = h(m’
 
+Il existe donc 2 résistance :
+
+### Résistance à la préimage
+
+Pour toute sortie définis y  il est impossible de trouver une valeur x tel que h(x) = y
+
+### Résistance à la seconde préimage 
+
+Il est impossible de trouver une seconde entrée qui a la même valeur de hachage qu’une entrée spécifiée ; soit un x x donné, il est difficile de trouver une deuxième préimage x ′ ≠ x {\displaystyle x'\neq x} tel que h ( x ) = h ( x ′ ) 
 
 
 
