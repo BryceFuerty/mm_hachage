@@ -77,6 +77,21 @@ Le résultat est le suivant : $\approx$ 22.352
 
 Pour 23 personnes on sait donc qu'il y a une probabilité de plus de 50% qu'une personne soit née le même jour qu'une autre personne du groupe.
 
+#### Calcul du paradoxe des anniversaires
+
+Nous allosn prouver le paradoxe des anniversaire en développant le calcul de la probabilité de colision : 
+
+  Nous allons partir pour cet exemple sur une classe de 23 élèves.
+ 
+  $\overline {P(23)} = \dfrac{365!}{(365-23)!} \times \dfrac{1}{(365^{23})!}$
+  
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $= \dfrac{365 \times 364 \times 363 \times ... \times (365-(23-1))}{365^{23}} $
+
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $= \dfrac{365 \times 364 \times 363 \times ... \times (365-(23-1))}{365^{23}} $
+
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  $= 1 \times (1- \dfrac{1}{365})(1- \dfrac{2}{365})(1- \dfrac{3}{365}) \times ... (1- \dfrac{23-1}{365}) $
+  
+
 ## Les collisions
 
 Nous allons écrire un petit algorithme permettant de chercher des colisions, cependant cette algorithme de cherchera des colisions que parmis des nombres aléatoire.
