@@ -6,6 +6,8 @@
 Le hachage est un outil de chiffrement permetant de transformer des données diverses en forme abrégée que l'on appel valeur de hachage.
 Pour chaque méthode de hachage, les valeurs de hachage sont toujours de la même longueur.
 Contrairement au chiffrement une fois les données hachés il n'est pas possible de revenir à la valeur d'origine et non haché.
+Le hachage est largement utilisé dans l'informatique et la sécurité pour diverses applications, telles que la vérification de l'intégrité des données, la comparaison rapide de grandes quantités de données, la sécurisation des mots de passe (en stockant des hachés plutôt que les mots de passe eux-mêmes), et la création de signatures numériques
+Un aspect fondamental du hachage est sa capacité à créer des empreintes digitales numériques uniques pour des informations données. Ces empreintes, souvent appelées "hash" ou "haché", agissent comme des signatures numériques pour les données d'origine
 
 ## Son fonctionnement
 
@@ -58,11 +60,49 @@ Le hachage repose sur cinq caractéristiques :
     Comme nous avons pu le voir précédement, pour une méthode de hachage la longeur de hash doit toujours être la même. Qu'il s'aggisse d'un document entier ou d'un simple mots. Nous gagnons donc du temps        sur la comparaisons des données en comparant des donneés de 64 caractères ( pour l'exemple du SHA256 ) plutot qu'un document entier.
 
     Cependant nous allons maintenant comaprarer deux Algorithmes sur leur vitesse, le SHA1 et le SHA256. Le SHA1 possède un Hash plus court mais est plus ancien, le temps nécessaire pour calculer une valeur      de hachage est moindre. Mais les performances de l'algorithme est plus lent. Le SHA256 lui possède un Hash plus long ce qui donne un temps nécessaire pour calculer une valeur de hashage beaucoup plus         long. Mais ses performance sont plus rapides.
-    
-    
+
 
 
 Une autre propriétée importante est la résistance en préimage, étant donnée une valeurde haché, il doit être difficile de déterminer un message dont l’image par la fonction de hachage soit égale à cette valeur de haché. Mais nous en parlerons plus précisément dans la partie "Attaque de préimage" 
+
+Afin de comprendre comment peut être utilisé le hachage dans du code voici un exemple : 
+```python
+import hashlib
+
+def calculer_hash(donnees):
+    # Créer un objet de hachage MD5
+    hachage = hashlib.md5()
+
+    # Mettre à jour le hachage avec les données
+    hachage.update(donnees.encode('utf-8'))
+
+    # Récupérer le haché final en format hexadécimal
+    hache_final = hachage.hexdigest()
+
+    return hache_final
+
+# Exemple de données
+donnees_originales = "Ceci est un exemple de données."
+
+# Calculer le haché des données d'origine
+hache_resultat = calculer_hash(donnees_originales)
+
+# Afficher les résultats
+print(f"Données d'origine : {donnees_originales}")
+print(f"Haché MD5 : {hache_resultat}")
+
+# Exemple de test de hachage
+donnees_modifiees = "Ceci est une modification des données."
+
+# Calculer le haché des données modifiées
+hache_resultat_modifie = calculer_hash(donnees_modifiees)
+
+# Vérifier si les hachés sont identiques
+if hache_resultat == hache_resultat_modifie:
+    print("Les hachés sont identiques. Les données n'ont pas été modifiées.")
+else:
+    print("Les hachés sont différents. Les données ont été modifiées.")
+```
 
 ## L'attaque des anniversaires
 
@@ -90,7 +130,15 @@ Nous allosn prouver le paradoxe des anniversaire en développant le calcul de la
   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $= \dfrac{365 \times 364 \times 363 \times ... \times (365-(23-1))}{365^{23}} $
 
   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  $= 1 \times (1- \dfrac{1}{365})(1- \dfrac{2}{365})(1- \dfrac{3}{365}) \times ... (1- \dfrac{23-1}{365}) $
-  
+
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $= e^{- \dfrac{1}{365}} \times e^{- \dfrac{2}{365}} \times ... \times e^{- \dfrac{(23-1)}{365}} = e^{- (\dfrac{1}{365} + \dfrac{2}{365} + ... + \dfrac{(23-1)}{365}) } $
+
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $= e^{- \dfrac{1}{365} (1+2+ ... +(23-1))} $
+
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $= e^{- \dfrac{1}{365}} \times e^{- \dfrac{23 \times (23-1)}{365}} $
+
+  $P(23) ≈ 1 -  e^{- \dfrac{1}{365}} \times e^{- \dfrac{23 \times (23-1)}{365}} ≈ 0.500$
+
 
 ## Les collisions
 
