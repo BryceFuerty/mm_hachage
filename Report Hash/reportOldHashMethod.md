@@ -74,6 +74,13 @@ Pour toute sortie définis y  il est impossible de trouver une valeur x tel que 
 ### Résistance à la seconde préimage 
 
 Il est impossible de trouver une seconde entrée qui a la même valeur de hachage qu’une entrée spécifiée ; soit un x x donné, il est difficile de trouver une deuxième préimage x ′ ≠ x {\displaystyle x'\neq x} tel que h ( x ) = h ( x ′ ) 
+Une fonction de hachage se doit d'être résistante aux attaques par préimage et seconde préimage car si un algorithme de hache est senseible à ces attaques cela consituterais une grosse faille de sécurité et remettrais en cause l'intégrité des données. Ces concepts de préimage et seconde préimage sont totalement distinct de la collision.
+
+## Effet avalanche
+
+
+
+
 
 
 
