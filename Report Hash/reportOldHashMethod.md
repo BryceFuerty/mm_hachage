@@ -9,9 +9,9 @@ sources :
 
           Cryptomancie avancée, Algorithme, protocoles et codes sources en C, Bruce Schneier
 
+          https://fr.alegsaonline.com/art/7672
+
           
-
-
 
 ## MD5 : 
  MD5 est concu par Ron Rivest, c'est une version amélioré de MD4. Il produit des empreintes sur 128bits. La sortie de l'algortihme est un ensemble de 4 blocs de 32 bits joints ensemble pour former les 128 bits.
@@ -77,6 +77,19 @@ Il est impossible de trouver une seconde entrée qui a la même valeur de hachag
 Une fonction de hachage se doit d'être résistante aux attaques par préimage et seconde préimage car si un algorithme de hache est senseible à ces attaques cela consituterais une grosse faille de sécurité et remettrais en cause l'intégrité des données. Ces concepts de préimage et seconde préimage sont totalement distinct de la collision.
 
 ## Effet avalanche
+
+L'effet d'avalanche est un concept nécessaire a tout algorithme cryptographique, en effet si même une seule valeur à l'entée change la sortie doit être totalement différente. Le concept d'avalanche a été evoqué la première fois par
+Horst Feistel (1973). Si l'effet d'avalanche n'est pas satisfait sa randomisation est mauvaise et donc un cryptanalyste peut faire des prévisions pour l'entré en ne connaissant que la sortie.
+
+L'effet d'avalanche se base sur 2 critères : 
+
+### Critère strict d'avalanche (SAC)
+
+Le critère strict d'avalanche est une propriété des fonctions booléennes. Ce critère est satisfait si lorsque l'on modifiie un seul bit a l'entrée tous les bits de sortie changent avec une probabilité de 50%. Ce critère a été présenté par Webster et Tavares en 1985 
+
+voir cet article : 
+
+          https://link.springer.com/chapter/10.1007/3-540-39799-X_41
 
 
 
