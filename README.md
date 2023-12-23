@@ -16,4 +16,7 @@ Loic Guinle
 
 ## Projet final
 
-Le projet final ce trouve ici : Ici ce qui suit [Hashage](Report Hash/Hashage.ipynb).
+Le projet final ce trouve ici : Ici ce qui suit [Accéder à Hashage.ipynb](Report%20Hash/Hashage.ipynb)
+
+Vous pouvez aussi retrouver le diaporama utilisé lors de notre présentation via ce lien : [Accés au Diaporama](https://www.canva.com/design/DAF3RAOunvI/9pn1O8iwvA5GM9sws5jaMQ/edit?utm_content=DAF3RAOunvI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
